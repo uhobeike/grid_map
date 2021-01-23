@@ -42,10 +42,9 @@ def callback(self):
     rosimage.step = img.strides[0]
     rosimage.data = img.tostring()
     rosimage.header.stamp = rospy.Time.now()
-    rosimage.header.frame_id = 'map'
+    rosimage.header.frame_id = 'map_grid'
 
     publisher.publish(rosimage)
-
 
 #Main function initializes node and subscribers and starts the ROS loop
 def main_program():
@@ -55,7 +54,7 @@ def main_program():
     imagePath = rospy.get_param('~image_path')
     topicName = rospy.get_param('~topic')
     publisher = rospy.Publisher(topicName, sensor_msgs.msg.Image, queue_size=10)
-    rospy.Timer(rospy.Duration(2), callback)
+    rospy.Timer(rospy.Duration(1), callback)
     rospy.spin()
 
 if __name__ == '__main__':
