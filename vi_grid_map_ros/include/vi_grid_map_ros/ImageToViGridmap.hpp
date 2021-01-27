@@ -42,6 +42,7 @@ class ImageToViGridmap
 
   //! ROS nodehandle.
   ros::NodeHandle& nodeHandle_;
+  ros::NodeHandle pnh_;
 
   //! Grid map publisher.
   ros::Publisher gridMapPublisher_;
