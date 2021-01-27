@@ -63,8 +63,18 @@ add_executable(image_to_vi_gridmap
   src/ImageToViGridmap.cpp
 )
 
+add_executable(image_publisher
+  src/image_publisher.cpp
+)
+
 target_link_libraries(
   image_to_vi_gridmap
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+target_link_libraries(
+  image_publisher
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
 )
