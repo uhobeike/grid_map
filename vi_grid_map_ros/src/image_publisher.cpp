@@ -70,7 +70,7 @@ public:
                 header.stamp = ros::Time::now();
                 
                 cv_bridge::CvImage img_bridge;
-                img_bridge = cv_bridge::CvImage(header, "bgra8", alpha_image);
+                img_bridge = cv_bridge::CvImage(header, "rgba8", alpha_image);
                 
                 sensor_msgs::Image msg;
                 img_bridge.toImageMsg(msg);
