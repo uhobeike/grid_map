@@ -34,7 +34,6 @@ class ImageToViGridmap
   * @return true if successful.
   */
   bool readParameters();
-  bool transparency_processing(const sensor_msgs::Image& image);
 
   void imageCallback(const sensor_msgs::Image& msg);
 

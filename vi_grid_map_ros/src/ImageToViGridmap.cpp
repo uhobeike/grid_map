@@ -34,15 +34,6 @@ bool ImageToViGridmap::readParameters()
   return true;
 }
 
-//透過処理
-bool ImageToViGridmap::transparency_processing(const sensor_msgs::Image& image)
-{
-  
-
-  //cv::imwrite("/tmp/test.png", alpha_image);
-  
-}
-
 void ImageToViGridmap::imageCallback(const sensor_msgs::Image& msg)
 {
   //初回のみ
