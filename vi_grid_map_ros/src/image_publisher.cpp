@@ -44,12 +44,12 @@ public:
                 image = cv::imread(imagePath_);
 
                 std::vector<int> param = std::vector<int>(2);
-                param[0] = CV_IMWRITE_PNG_COMPRESSION;
+                param[0] = cv::IMWRITE_PNG_COMPRESSION;
                 param[1] = 9;//default(3)  0-9　最高設定
 
                 std::vector<uchar>buf;
                 cv::imencode(".png", image, buf, param);
-                cv::Mat im_decode = cv::imdecode(cv::Mat(buf), CV_LOAD_IMAGE_COLOR);
+                cv::Mat im_decode = cv::imdecode(cv::Mat(buf), cv::IMREAD_COLOR);
 
                 cv::Mat source = im_decode;
                 cv::Mat alpha_image = cv::Mat(source.size(), CV_8UC3);
