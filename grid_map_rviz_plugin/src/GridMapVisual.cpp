@@ -288,7 +288,7 @@ GridMapVisual::ColorArray GridMapVisual::computeColorValues(Eigen::Ref<const gri
     case ColoringMethod::INTENSITY_LAYER_INVERTED_RAINBOW:
       return colorData.unaryExpr([&](float color) {
         normalizeIntensity(color, minIntensity, maxIntensity);
-        return getRainbowColor(1.0f - color);
+        return getRainbowColor(0.8f - color);
       });
     default:
       throw std::invalid_argument(std::string("An unknown coloring method was provided: ") +
