@@ -1,5 +1,5 @@
 image_to_vi_gridmap:
-  image_topic: "/image_publisher/image"
+  image_topic: "/vi_node/image"
   resolution: 0.06
   map_frame_id: "map_grid"
   min_height: 0
